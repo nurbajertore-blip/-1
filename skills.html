@@ -3,56 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Финты и Блогеры</title>
+    <title>Финты и Техника</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; margin: 0; padding: 20px; }
-        .container { max-width: 600px; margin: auto; }
-        h1, h2 { text-align: center; color: #4caf50; }
-        .skill-card { background: #1e1e1e; border-radius: 12px; padding: 20px; margin-bottom: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .skill-name { font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; display: block; }
-        .skill-desc { color: #bbb; font-size: 0.95rem; margin-bottom: 15px; }
-        .video-btn { display: inline-block; background: #cc0000; color: white; text-decoration: none; padding: 10px 18px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; }
-        .video-btn:hover { background: #ff0000; }
-        .blogger-link { display: block; background: #2e7d32; color: white; text-decoration: none; padding: 15px; border-radius: 10px; margin-bottom: 10px; text-align: center; font-weight: bold; }
-        .back-btn { display: block; text-align: center; margin-top: 30px; color: #4caf50; text-decoration: none; font-weight: bold; border: 1px solid #4caf50; padding: 10px; border-radius: 8px; }
+        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: #e0e0e0; margin: 0; padding: 15px; }
+        .container { max-width: 650px; margin: auto; }
+        h1 { text-align: center; color: #4caf50; margin-bottom: 25px; }
+        .video-card { background: #1e1e1e; border-radius: 15px; padding: 15px; margin-bottom: 25px; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h3 { color: #fff; margin-top: 0; margin-bottom: 15px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; background: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .desc { font-size: 0.95rem; color: #bbb; line-height: 1.5; margin-top: 15px; margin-bottom: 0; }
+        .blogger-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; }
+        .blogger-item { display: block; background: #1a2e1a; color: #81c784; text-decoration: none; padding: 15px; border-radius: 10px; margin-bottom: 10px; font-weight: bold; text-align: center; border: 1px solid #2d5a27; }
+        .back-btn { display: block; text-align: center; margin-top: 30px; color: #4caf50; text-decoration: none; font-weight: bold; padding: 12px; border: 2px solid #4caf50; border-radius: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✨ Техника и Финты</h1>
+        <h1>✨ Футбольное Мастерство</h1>
 
-        <div class="skill-card">
-            <span class="skill-name">🌀 Эластико</span>
-            <p class="skill-desc">Легендарный финт Роналдиньо. Резкое перекладывание мяча внешней стороной стопы на внутреннюю.</p>
-            <a href="https://www.youtube.com/watch?v=S_8S_8I5-6E" target="_blank" class="video-btn">▶️ Смотреть видео-урок</a>
+        <div class="video-card">
+            <h3>🌀 Эластико</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/mjRJ1zxEeyQ" allowfullscreen></iframe>
+            </div>
+            <p class="desc">Легендарный финт: резкое движение мяча в одну сторону и мгновенный перевод в другую одной ногой.</p>
         </div>
 
-        <div class="skill-card">
-            <span class="skill-name">🔄 Финт Зидана</span>
-            <p class="skill-desc">Разворот на 360 градусов с перекатом мяча подошвой. Идеально для ухода от защитника.</p>
-            <a href="https://www.youtube.com/watch?v=BvHnAsW_26c" target="_blank" class="video-btn">▶️ Смотреть видео-урок</a>
+        <div class="video-card">
+            <h3>🔄 Финт Зидана</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/YkpiUjlpxb4" allowfullscreen></iframe>
+            </div>
+            <p class="desc">Разворот вокруг своей оси с перекатом мяча подошвой. Позволяет эффектно обыграть защитника.</p>
         </div>
 
-        <div class="skill-card">
-            <span class="skill-name">🌈 Радуга</span>
-            <p class="skill-desc">Эффектный переброс мяча через себя и соперника пяткой и подъемом стопы.</p>
-            <a href="https://www.youtube.com/watch?v=5Uq1_m5f0qg" target="_blank" class="video-btn">▶️ Смотреть видео-урок</a>
+        <div class="video-card">
+            <h3>🌈 Радуга</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Q62w33cg098" allowfullscreen></iframe>
+            </div>
+            <p class="desc">Переброс мяча через себя. Самый эффектный способ пройти соперника, если у тебя крутая техника.</p>
         </div>
 
-        <div class="skill-card">
-            <span class="skill-name">⚡ Наклбол</span>
-            <p class="skill-desc">Техника удара Криштиану Роналду, при которой мяч летит без вращения и виляет в воздухе.</p>
-            <a href="https://www.youtube.com/watch?v=N-Z7V4P3Y70" target="_blank" class="video-btn">▶️ Смотреть видео-урок</a>
+        <div class="video-card">
+            <h3>⚡ Наклбол</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/8hjR6jgtqfM" allowfullscreen></iframe>
+            </div>
+            <p class="desc">Техника удара, при которой мяч летит без вращения, постоянно меняя траекторию в воздухе.</p>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #333; margin: 30px 0;">
+        <div class="blogger-section">
+            <h2 style="text-align: center; color: #fff;">🎥 Рекомендуемые каналы</h2>
+            <a href="https://www.youtube.com/@MvachProduction" class="blogger-item" target="_blank">📺 Мяч Продакшн</a>
+            <a href="https://www.youtube.com/@2DROTS" class="blogger-item" target="_blank">🔥 2DROTS</a>
+            <a href="https://www.youtube.com/@GermanElClassico" class="blogger-item" target="_blank">🏆 German El Classico</a>
+        </div>
 
-        <h2>🎥 Топ-Блогеры</h2>
-        <a href="https://www.youtube.com/@MvachProduction" target="_blank" class="blogger-link">📺 Мяч Продакшн (Аналитика)</a>
-        <a href="https://www.youtube.com/@2DROTS" target="_blank" class="blogger-link">🔥 2DROTS (Медиафутбол)</a>
-        <a href="https://www.youtube.com/@GermanElClassico" target="_blank" class="blogger-link">🏆 German El Classico (Амкал)</a>
-
-        <a href="index.html" class="back-btn">← Назад на главную</a>
+        <a href="index.html" class="back-btn">← Вернуться на главную</a>
     </div>
 </body>
 </html>
+
