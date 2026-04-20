@@ -1,20 +1,93 @@
-<body style="font-family:sans-serif; background:#f0f2f0; padding:20px;">
-    <div style="background:white; padding:25px; border-radius:12px; max-width:600px; margin:auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h1 style="color:#2d5a27;">❓ Футбольный Квиз</h1>
-        <p>Проверь свои знания!</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футбольный Квиз</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; padding: 20px; display: flex; justify-content: center; }
+        .container { max-width: 600px; width: 100%; background: #1e1e1e; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h1 { color: #4caf50; text-align: center; }
+        .question { margin-bottom: 25px; padding: 15px; border-bottom: 1px solid #333; }
+        .question p { font-size: 1.1rem; margin-bottom: 15px; }
+        .options { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        button { background: #333; color: white; border: 1px solid #4caf50; padding: 12px; border-radius: 8px; cursor: pointer; transition: 0.3s; text-align: left; }
+        button:hover { background: #4caf50; color: white; }
+        .result-btn { width: 100%; background: #4caf50; font-weight: bold; font-size: 1.1rem; margin-top: 20px; text-align: center; }
+        .back-link { display: block; text-align: center; margin-top: 25px; color: #4caf50; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Футбольный Эксперт</h1>
         
-        <div style="margin-bottom:20px;">
-            <p><strong>1. Сколько «Золотых мячей» у Лионеля Месси?</strong></p>
-            <button onclick="alert('Верно! У него их 8.')" style="padding:10px; cursor:pointer;">8</button>
-            <button onclick="alert('Неверно, попробуй еще раз.')" style="padding:10px; cursor:pointer;">5</button>
+        <div id="quiz">
+            <div class="question">
+                <p>1. Какой футболист получил больше всего «Золотых мячей» в истории?</p>
+                <div class="options">
+                    <button onclick="check(1, 0)">Криштиану Роналду</button>
+                    <button onclick="check(1, 1)">Лионель Месси</button>
+                    <button onclick="check(1, 0)">Пеле</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Сколько игроков одной команды должно быть на поле в начале матча?</p>
+                <div class="options">
+                    <button onclick="check(2, 0)">10</button>
+                    <button onclick="check(2, 1)">11</button>
+                    <button onclick="check(2, 0)">12</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. Как называется ситуация, когда игрок забивает три гола за один матч?</p>
+                <div class="options">
+                    <button onclick="check(3, 0)">Дубль</button>
+                    <button onclick="check(3, 0)">Пента-трик</button>
+                    <button onclick="check(3, 1)">Хет-трик</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Можно ли забить гол руками, если ты полевой игрок?</p>
+                <div class="options">
+                    <button onclick="check(4, 1)">Нет, это нарушение</button>
+                    <button onclick="check(4, 0)">Да, если случайно</button>
+                    <button onclick="check(4, 0)">Только головой</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. В какой стране пройдет следующий Чемпионат мира 2026?</p>
+                <div class="options">
+                    <button onclick="check(5, 0)">Казахстан</button>
+                    <button onclick="check(5, 1)">США, Канада, Мексика</button>
+                    <button onclick="check(5, 0)">Франция</button>
+                </div>
+            </div>
+
+            <button class="result-btn" onclick="showResult()">Узнать результат</button>
         </div>
 
-        <div style="margin-bottom:20px;">
-            <p><strong>2. Можно ли вратарю брать мяч в руки после паса ногой от своего игрока?</strong></p>
-            <button onclick="alert('Верно! Это нарушение.')" style="padding:10px; cursor:pointer;">Нет</button>
-            <button onclick="alert('Ошибка! Брать в руки нельзя.')" style="padding:10px; cursor:pointer;">Да</button>
-        </div>
-
-        <a href="index.html" style="display:inline-block; margin-top:20px; color:#2d5a27; font-weight:bold; text-decoration:none;">← На главную</a>
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
     </div>
+
+    <script>
+        let score = 0;
+        let answers = {1:0, 2:0, 3:0, 4:0, 5:0};
+
+        function check(q, val) {
+            answers[q] = val;
+            // Подсветим выбранную кнопку (визуальный отклик)
+            event.target.parentElement.querySelectorAll('button').forEach(btn => btn.style.background = '#333');
+            event.target.style.background = '#2e7d32';
+        }
+
+        function showResult() {
+            score = answers[1] + answers[2] + answers[3] + answers[4] + answers[5];
+            alert('Ваш результат: ' + score + ' из 5 правильных ответов!');
+        }
+    </script>
 </body>
+</html>
